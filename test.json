@@ -1,0 +1,45 @@
+{
+    "init": {
+        "name": "test"
+    },
+    "instructions": [
+        [
+            {
+                "type": "strings",
+                "freq": 200,
+                "length": 1,
+                "sounddef": {
+                    "taper": 1
+                }
+            }
+        ],
+        [
+            {
+                "type": "pause",
+                "length": 2
+            },
+            {
+                "type": "strings",
+                "freq": 400,
+                "length": 1,
+                "sounddef": {
+                    "taper": 1
+                }
+            }
+        ],
+        [
+            {
+                "type": "pause",
+                "length": 3
+            },
+            {
+                "type": "strings",
+                "freq": 600,
+                "length": 1,
+                "sounddef": {
+                    "taper": 1
+                }
+            }   
+        ]
+    ]
+}
