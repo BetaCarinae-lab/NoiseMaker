@@ -16,7 +16,7 @@
         [
             {
                 "type": "pause",
-                "length": 2
+                "length": 1
             },
             {
                 "type": "strings",
@@ -30,7 +30,7 @@
         [
             {
                 "type": "pause",
-                "length": 3
+                "length": 2
             },
             {
                 "type": "strings",

@@ -64,9 +64,11 @@ if (process.argv[2]) {
     renderChannel(notes)
   );
 
+  console.log(channels)
+
   // Mix channels into a single buffer
   const data = mixChannels(channels);
-
+  
   writeWav(data, process.argv[3]);
 }
 
@@ -88,7 +90,7 @@ function mixChannels(channels: Float32Array[]): Float32Array {
 
   // Normalize to prevent clipping
   let max = 0;
-  for (let i = 0; i < out.length; i++) max = Math.max(max, Math.abs(out[i]));
+    for (let i = 0; i < out.length; i++) max = Math.max(max, Math.abs(out[i]));
   if (max > 1) {
     for (let i = 0; i < out.length; i++) out[i] /= max;
   }
@@ -97,7 +99,8 @@ function mixChannels(channels: Float32Array[]): Float32Array {
 }
 
 function pause(length: number) {
-    return new Float32Array(length).fill(0)
+    let newf32 = new Float32Array(length * sampleRate)
+    return newf32
 }
 
 
