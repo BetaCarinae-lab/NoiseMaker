@@ -1,0 +1,17 @@
+{
+    "init": {
+        "name": "brass-test"
+    },
+    "instructions": [
+        [
+            {
+                "type": "wiggle",
+                "freq": 600,
+                "length": 1,
+                "sounddef": {
+                    "taper": 1
+                }
+            }
+        ]
+    ]
+}

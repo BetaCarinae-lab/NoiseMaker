@@ -17,6 +17,99 @@ function stringSound(freq: number, length: number, taper = 3) {
   return out;
 }
 
+function wiggleSound(frequency: number, duration: number, sampleRate = 44100, sounddef: sound_definers): Float32Array {
+    const length = Math.floor(duration * sampleRate);
+    const buffer = new Float32Array(length);
+
+    // Envelope parameters (simple ADSR-ish)
+    const attack = sounddef.attack ? sounddef.attack : 0.05; // seconds
+    const decay = sounddef.decay ? sounddef.decay : 0.2;
+    const sustain = sounddef.sustain ? sounddef.sustain : 0.7;
+    const release = sounddef.release ? sounddef.release : 0.3;
+
+    // Vibrato parameters
+    const vibratoFreq = sounddef.vibratoFreq ? sounddef.vibratoFreq : 5; // Hz
+    const vibratoDepth = sounddef.vibratoDepth ? sounddef.vibratoDepth : 5; // Hz
+
+    for (let i = 0; i < length; i++) {
+        const t = i / sampleRate;
+
+        // Envelope
+        let env = 1;
+        if (t < attack) env = t / attack;
+        else if (t < attack + decay) env = 1 - ((t - attack) / decay) * (1 - sustain);
+        else if (t < duration - release) env = sustain;
+        else env = sustain * (1 - (t - (duration - release)) / release);
+
+        // Vibrato
+        const vibrato = Math.sin(2 * Math.PI * vibratoFreq * t) * vibratoDepth;
+
+        // Base waveform: sawtooth + triangle mix
+        const saw = 2 * (t * (frequency + vibrato) - Math.floor(0.5 + t * (frequency + vibrato)));
+        const tri = 2 * Math.abs(2 * (t * (frequency + vibrato) - Math.floor(t * (frequency + vibrato) + 0.5))) - 1;
+
+        // Mix waveforms for warmth
+        const wave = 0.7 * saw + 0.3 * tri;
+
+        // Simple soft clipping to simulate brass
+        const sample = Math.tanh(wave) * env;
+
+        buffer[i] = sample;
+    }
+
+    return buffer;
+}
+
+function generateKick(sampleRate = 44100, duration = 0.5): Float32Array {
+    const length = Math.floor(sampleRate * duration);
+    const buffer = new Float32Array(length);
+
+    const startFreq = 150; // Hz, initial pitch
+    const endFreq = 50;    // Hz, final pitch
+    const decay = 0.4;     // seconds
+
+    for (let i = 0; i < length; i++) {
+        const t = i / sampleRate;
+
+        // Exponential pitch drop
+        const freq = startFreq * Math.pow(endFreq / startFreq, t / decay);
+
+        // Oscillator (sine wave for kick body)
+        const sine = Math.sin(2 * Math.PI * freq * t);
+
+        // Envelope: fast exponential decay
+        const env = Math.exp(-t / decay);
+
+        // Optional subtle noise for click
+        const noise = (Math.random() * 2 - 1) * 0.05 * Math.exp(-t / 0.02);
+
+        buffer[i] = sine * env + noise;
+    }
+
+    return buffer;
+}
+
+function generateSnare(sampleRate = 44100, duration = 0.3): Float32Array {
+    const length = Math.floor(sampleRate * duration);
+    const buffer = new Float32Array(length);
+
+    for (let i = 0; i < length; i++) {
+        const t = i / sampleRate;
+
+        // White noise burst
+        const noise = (Math.random() * 2 - 1);
+
+        // Fast decay envelope
+        const env = Math.exp(-t / 0.1);
+
+        buffer[i] = noise * env;
+    }
+
+    return buffer;
+}
+
+
+
 function writeWav(samples: Float32Array, filename: string) {
     const buffer = Buffer.alloc(44 + samples.length * 2);
 
@@ -52,6 +145,12 @@ type note = {
 
 type sound_definers = {
     taper: number,
+    attack: number,
+    decay: number,
+    sustain: number,
+    release: number,
+    vibratoFreq: number,
+    vibratoDepth: number,
 }
 
 
@@ -63,8 +162,6 @@ if (process.argv[2]) {
   const channels = json.instructions.map((notes: note[]) =>
     renderChannel(notes)
   );
-
-  console.log(channels)
 
   // Mix channels into a single buffer
   const data = mixChannels(channels);
@@ -111,6 +208,15 @@ function getData(type: string, freq: any, length: any, sounddef: any) {
 
         case 'pause':
             return pause(length)
+
+        case 'wiggle':
+            return wiggleSound(freq, length, sampleRate, sounddef)
+
+        case 'kick': 
+            return generateKick(sampleRate, length)
+
+        case 'snare':
+            return generateSnare(sampleRate, length)
             
         default: 
             console.log('uhoh, 3:')

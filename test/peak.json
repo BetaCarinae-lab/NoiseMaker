@@ -1,0 +1,481 @@
+{
+    "init": {
+        "name": "peak music"
+    },
+    "instructions": [
+        [
+            {
+                "type": "strings",
+                "freq": 100,
+                "length": 3,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 200,
+                "length": 1,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 100,
+                "length": 3,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 100,
+                "length": 3,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 200,
+                "length": 1,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 100,
+                "length": 3,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 100,
+                "length": 3,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 200,
+                "length": 1,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 100,
+                "length": 3,
+                "sounddef": {
+                    "taper": 0
+                }
+            }
+        ],
+        [
+            {
+                "type": "strings",
+                "freq": 400,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 470,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 530,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 610,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 680,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 400,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 470,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 530,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 610,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 680,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 400,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 470,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 530,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 610,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 680,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 400,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 470,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 530,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 610,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 680,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 400,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 470,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 530,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 610,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 680,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 400,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 470,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 530,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 610,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 680,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 400,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 470,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 530,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 610,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 680,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 400,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 470,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 530,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 610,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 680,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 400,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 470,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 530,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 610,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            },
+            {
+                "type": "strings",
+                "freq": 680,
+                "length": 0.5,
+                "sounddef": {
+                    "taper": 0
+                }
+            }
+        ],
+        [
+            {
+                "type": "kick",
+                "length": 3
+            },
+            {
+                "type": "kick",
+                "length": 1
+            },
+            {
+                "type": "kick",
+                "length": 3
+            },
+            {
+                "type": "kick",
+                "length": 3
+            },
+            {
+                "type": "kick",
+                "length": 1
+            },
+            {
+                "type": "kick",
+                "length": 3
+            },
+            {
+                "type": "kick",
+                "length": 3
+            },
+            {
+                "type": "kick",
+                "length": 1
+            },
+            {
+                "type": "kick",
+                "length": 3
+            }
+        ]
+    ]
+}

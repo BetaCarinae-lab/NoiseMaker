@@ -1,0 +1,17 @@
+{
+    "init": {
+        "name": "drum-test"
+    },
+    "instructions": [
+        [
+            {
+                "type": "kick",
+                "length": 1
+            },
+            {
+                "type": "snare",
+                "length": 1
+            }
+        ]
+    ]
+}
